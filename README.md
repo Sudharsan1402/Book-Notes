@@ -2,7 +2,6 @@
 
 A simple and powerful web app that allows users to **add, update, and delete books**, storing the data in a **PostgreSQL** database. Book cover images are automatically fetched using the **Open Library API** based on the ISBN.
 
-🎥 [Watch Demo on YouTube](https://www.youtube.com/watch?v=cqHv4No8WMg)
 
 ---
 
@@ -128,15 +127,6 @@ Book-Notes/
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions of all kinds!
-
-- Fork the repo and create a new branch.
-- Submit a well-described Pull Request (PR).
-- Wait for a review — we’ll get back to you ASAP!
-
----
 
 ## 📬 Contact
 
