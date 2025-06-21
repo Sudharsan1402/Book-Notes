@@ -1,7 +1,3 @@
-from pathlib import Path
-
-# Markdown content from the previously created README
-readme_content = """
 # 📚 Book Notes
 
 A simple and powerful web app that allows users to **add, update, and delete books**, storing the data in a **PostgreSQL** database. Book cover images are automatically fetched using the **Open Library API** based on the ISBN.
@@ -41,3 +37,109 @@ Before running the project, ensure you have the following installed:
 ```bash
 git clone https://github.com/your-username/Book-Notes.git
 cd Book-Notes
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure PostgreSQL Database
+
+- Ensure PostgreSQL is running.
+- Create a new database (e.g., `booknotes`).
+- Execute the SQL schema provided in [`queries.sql`](./queries.sql) to create the required tables.
+
+### 4. Update DB Config
+
+Edit the `dbConfig` object inside `index.js`:
+
+```js
+const dbConfig = {
+  user: 'your_db_user',
+  host: 'localhost',
+  database: 'booknotes',
+  password: 'your_db_password',
+  port: 5432
+};
+```
+
+---
+
+## 💻 Usage
+
+### Run the App
+
+```bash
+nodemon index.js
+```
+
+Then, open your browser and visit:
+
+```
+http://localhost:3000
+```
+
+You can now:
+- 📘 Add books
+- ✏️ Edit existing books
+- ❌ Delete unwanted books
+
+---
+
+## 🧪 Development Workflow
+
+1. **Fork** this repo to your GitHub account.
+2. **Clone** your forked repo:
+   ```bash
+   git clone https://github.com/your-username/Book-Notes.git
+   ```
+3. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+4. Make your changes.
+5. Commit & push:
+   ```bash
+   git add .
+   git commit -m "Your message"
+   git push origin feature/your-feature-name
+   ```
+6. Create a **Pull Request** with a meaningful description.
+
+---
+
+## 📁 Folder Structure
+
+```
+Book-Notes/
+├── public/
+│   ├── css/
+│   └── images/
+├── views/
+│   ├── index.ejs
+│   └── ...
+├── queries.sql
+├── index.js
+├── package.json
+└── README.md
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions of all kinds!
+
+- Fork the repo and create a new branch.
+- Submit a well-described Pull Request (PR).
+- Wait for a review — we’ll get back to you ASAP!
+
+---
+
+## 📬 Contact
+
+Feel free to raise issues for feedback, improvements, or questions.
+
+Thank you for checking out **Book Notes**! ✨
