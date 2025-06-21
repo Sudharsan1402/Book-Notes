@@ -1,45 +1,137 @@
-# Book Notes
-This website allows user to add, update, delete books to the application. It saves the books to PostgreSQL database. Open Library API is used to fetch Book Cover Image based on ISBN.
+📚 Book Notes
 
-For outcomes, check the results folder or go to this [YouTube](https://www.youtube.com/watch?v=cqHv4No8WMg) link.
+A simple and powerful web app that allows users to add, update, and delete books, storing the data in a PostgreSQL database. Book cover images are automatically fetched using the Open Library API based on the ISBN.
 
-# Prerequisites
-* Node.js installed on your system
-* PostgreSQL database installed and running
-* pg Node.js package installed
-* Express Node.js package installed
-* body-parser Node.js package installed
+🎥 Watch Demo on YouTube
 
-# Features
-* CRUD Methods used.
-* Saves to PostgreSQL.
-* Open Library API used.
+🚀 Features
 
-# Development
-* Fork this repository to your GitHub account.
-* Clone your forked repository to your local machine.
-* Make changes to the code as needed.
-* Commit your changes and push them to your forked repository.
-* Create a pull request to merge your changes into the upstream repository.
+✅ Full CRUD operations (Create, Read, Update, Delete)
 
-# Installation
-* Clone the repository.
-* Install the required dependencies using "npm i".
-* Create the necessary tables in your PostgreSQL database. You can copy the SQL queries from the queries.sql file and execute them in your database management tool.
-* Configure the database connection settings in the dbConfig object in the index.js file. Replace the placeholder values with your database credentials.
+✅ PostgreSQL for robust data storage
 
-# Usage
-* Run the application using "nodemon index.js".
-* Open "localhost:3000" on your browser.
+✅ Integration with Open Library API for book covers
 
-# Contribution
-* Fork the repository to your GitHub account.
-* Clone your forked repository.
-* Create a new branch for your contribution.
-* Make your changes, commit them, and push to your forked repository.
-* Create a pull request (PR) to the main repository. Provide a descriptive title and details about your changes.
-* Your PR will be reviewed, and once approved, it will be merged into the main project.
+✅ Responsive front-end built using EJS templates
 
-Thank You!
+✅ Backend powered by Node.js and Express.js
 
+📦 Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+Node.js
+
+PostgreSQL
+
+Node packages:
+
+pg
+
+express
+
+body-parser
+
+nodemon (for development)
+
+🛠️ Installation & Setup
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/Book-Notes.git
+cd Book-Notes
+
+2. Install Dependencies
+
+npm install
+
+3. Configure PostgreSQL Database
+
+Ensure PostgreSQL is running.
+
+Create a new database (e.g., booknotes).
+
+Execute the SQL schema provided in queries.sql to create the required tables.
+
+4. Update DB Config
+
+Edit the dbConfig object inside index.js:
+
+const dbConfig = {
+  user: 'your_db_user',
+  host: 'localhost',
+  database: 'booknotes',
+  password: 'your_db_password',
+  port: 5432
+};
+
+💻 Usage
+
+Run the App
+
+nodemon index.js
+
+Then, open your browser and visit:
+
+http://localhost:3000
+
+You can now:
+
+📘 Add books
+
+✏️ Edit existing books
+
+❌ Delete unwanted books
+
+🧪 Development Workflow
+
+Fork this repo to your GitHub account.
+
+Clone your forked repo:
+
+git clone https://github.com/your-username/Book-Notes.git
+
+Create a new branch:
+
+git checkout -b feature/your-feature-name
+
+Make your changes.
+
+Commit & push:
+
+git add .
+git commit -m "Your message"
+git push origin feature/your-feature-name
+
+Create a Pull Request with a meaningful description.
+
+📁 Folder Structure
+
+Book-Notes/
+├── public/
+│   ├── css/
+│   └── images/
+├── views/
+│   ├── index.ejs
+│   └── ...
+├── queries.sql
+├── index.js
+├── package.json
+└── README.md
+
+🤝 Contributing
+
+We welcome contributions of all kinds!
+
+Fork the repo and create a new branch.
+
+Submit a well-described Pull Request (PR).
+
+Wait for a review — we’ll get back to you ASAP!
+
+📬 Contact
+
+Feel free to raise issues for feedback, improvements, or questions.
+
+Thank you for checking out Book Notes! ✨
 
