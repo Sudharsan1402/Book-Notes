@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "pg": "^8.16.2"
+  },
+  "name": "capstone-book-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mehmood Ali",
+  "license": "ISC",
+  "description": ""
+}

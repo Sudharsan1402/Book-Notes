@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    background: radial-gradient(#b1ddf1 15%, rgba(0,0,0,0) 16%),
+                radial-gradient(#000000 15%, rgba(0,0,0,0) 16%),
+                #fc0;
+    background-position: 0 0, 30px 30px;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: 60px 60px;
+    animation: fadeInBody 0.6s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.box {
+    width: 80%;
+    margin: auto;
+    animation: slideUp 0.6s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-new-book-section,
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 196, 126, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.add-new-book-section:hover,
+.container:hover {
+    transform: scale(1.01);
+}
+
+.titlename,
+.liner,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: vertical;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.liner {
+    width: 32.93%;
+    white-space: nowrap;
+}
+
+.titlename:focus,
+.liner:focus,
+textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+    outline: none;
+}
+
+textarea {
+    height: 70px;
+}
+
+.update-btn {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.update-btn:hover {
+    filter: brightness(90%);
+    transform: translateY(-2px);
+}
+
+button {
+    padding: 10px 15px;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button.submit-btn { background-color: #28a745; }
+button.delete-btn { background-color: #dc3545; }
+button.edit-btn { background-color: #007bff; }
+
+button:hover {
+    filter: brightness(90%);
+}
+
+h1, h2, h3 {
+    color: #000000;
+}
+
+p {
+    line-height: 1.6;
+    color: #555555;
+}
+
+.edit-form,
+.delete-form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.book {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.abook {
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book-details {
+    display: flex;
+    background-color: rgba(255, 227, 130, 0.85);
+    flex-wrap: wrap;
+}
+
+.book-image {
+    flex: 0 0 30%;
+    padding: 10px;
+}
+
+.cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.book-info {
+    flex: 1;
+    padding: 10px;
+}
+
+.book-description {
+    text-align: justify;
+    color: #555555;
+}
+
+.rating {
+    color: #007bff;
+}
+
+.delete-form,
+.edit-form {
+    margin-top: 10px;
+}
+
+.delete-btn,
+.edit-btn {
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+    filter: brightness(90%);
+}
+
+.newheading {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .box {
+        width: 95%;
+    }
+
+    .book-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-image,
+    .book-info {
+        flex: 1 0 100%;
+    }
+
+    .liner {
+        width: 100%;
+    }
+
+    .update-btn,
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .edit-form,
+    .delete-form {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.abook {
+    animation: popInCard 0.6s ease forwards;
+    opacity: 0; /* Start invisible until animated */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@keyframes popInCard {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.abook:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
