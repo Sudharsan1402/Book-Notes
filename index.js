@@ -13,9 +13,6 @@ app.set('view engine', 'ejs');
 // Initialize PostgreSQL client
 const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
 });
 
 // Connect to the database
